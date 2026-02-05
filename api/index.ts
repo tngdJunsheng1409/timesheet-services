@@ -22,6 +22,7 @@ if (process.env.NODE_ENV !== "production") {
   });
 }
 
+app.use(cors()); // allows all origins
 app.options("*", cors());
 
 // ✅ This is what Vercel uses
