@@ -6,7 +6,10 @@
   "types": "./lib/index.d.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun --hot ./src/index.ts"
+    "dev": "bun --hot ./src/index.ts",
+    "build": "tsc",
+    "clean": "rm -rf lib",
+    "start": "node lib/index.js"
   },
   "devDependencies": {
     "@types/bun": "latest",

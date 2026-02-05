@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
+    "rootDir": "./src",
+    "outDir": "./lib",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "noImplicitAny": true,
@@ -11,14 +12,13 @@
     "resolveJsonModule": true,
     "target": "esnext",
     "lib": ["DOM", "ES5", "ESNext", "DOM.Iterable", "ScriptHost"],
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["src/*"],
-      "@tests/*": ["tests/*"]
+      "@/*": ["./*"],
+      "@tests/*": ["../tests/*"]
     },
     "declaration": true,
-    "declarationDir": "lib",
-    "emitDeclarationOnly": true,
+    "declarationDir": "./lib",
     // Best practices
     "strict": true,
     "skipLibCheck": true,
