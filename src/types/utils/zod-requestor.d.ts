@@ -1,22 +1,22 @@
-import { z } from "zod/v4"
+import { z } from "zod";
 
 export type TApiSchemaConvertor<schema> = schema extends {
-  request: infer Req
-  response: infer Res
+  request: infer Req;
+  response: infer Res;
 }
   ? {
-      request: z.input<Req>
-      response: z.output<Res>
+      request: z.input<Req>;
+      response: z.output<Res>;
     }
-  : never
+  : never;
 
 export type TApiMapSchemaConvertor<mapSchema> = {
-  [x in keyof mapSchema]: TApiSchemaConvertor<mapSchema[x]>
-}
+  [x in keyof mapSchema]: TApiSchemaConvertor<mapSchema[x]>;
+};
 
 export interface IApiMapSchema {
   [key: string]: {
-    request: z.ZodType
-    response: z.ZodType
-  }
+    request: z.ZodType;
+    response: z.ZodType;
+  };
 }

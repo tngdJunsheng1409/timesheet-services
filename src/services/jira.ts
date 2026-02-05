@@ -1,4 +1,4 @@
-import { tngdJiraDomain } from "@/constants/jira";
+import { JIRA_DOMAIN } from "@/constants/jira-timesheet";
 import { jiraApiSchemas } from "@/schemas/jira.schema";
 import { createZodRequestor } from "@/utils/create-zod-requestor";
 import axios from "axios";
@@ -27,7 +27,7 @@ if (!JIRA_URL) {
 const createJiraRequestor = (email: string, apiToken: string) => {
   const token = Buffer.from(`${email}:${apiToken}`).toString("base64");
   return createZodRequestor(jiraApiSchemas, {
-    baseURL: `${tngdJiraDomain}/rest/api/3/`,
+    baseURL: `${JIRA_DOMAIN}/rest/api/3/`,
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",

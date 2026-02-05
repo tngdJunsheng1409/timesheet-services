@@ -1,4 +1,4 @@
-import z from "zod/v4"
+import { z } from "zod";
 
 export const jiraFieldStatusSchema = z.object({
   self: z.string(),
@@ -14,4 +14,4 @@ export const jiraFieldStatusSchema = z.object({
     colorName: z.string(),
     name: z.string(),
   }),
-})
+});

@@ -1,4 +1,4 @@
-import z from "zod/v4"
+import { z } from "zod";
 
 export const jiraIssueTypeSchema = z.object({
   self: z.string(),
@@ -8,4 +8,4 @@ export const jiraIssueTypeSchema = z.object({
   name: z.string(),
   subtask: z.boolean(),
   hierarchyLevel: z.number(),
-})
+});

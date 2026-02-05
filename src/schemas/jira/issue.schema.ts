@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { jiraFieldParentSchema } from "./field/parent.schema";
 import { jiraFieldsSchema } from "@/schemas/jira/fields.schema";
 

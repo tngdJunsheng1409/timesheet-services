@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { jiraIssueTypeSchema } from "./field/issue-type.schema";
 import { jiraFieldPrioritySchema } from "./field/priority.schema";
 import { jiraFieldStatusSchema } from "./field/status.schema";

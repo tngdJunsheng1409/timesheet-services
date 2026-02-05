@@ -6,6 +6,9 @@ export const JIRA_TIMESHEET_CONFIG = {
   GEMINI_API_KEY: process.env.GEMINI_API_KEY,
 } as const;
 
+// JIRA Domain Configuration
+export const JIRA_DOMAIN = "https://tngd-jira.atlassian.net";
+
 // AI Configuration
 export const AI_CONFIG = {
   ENABLED: true, // Temporarily disabled due to rate limits

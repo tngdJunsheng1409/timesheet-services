@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { jiraIssueSchema } from "@/schemas/jira/issue.schema";
 
 export const jiraSearchReqSchema = z.object({

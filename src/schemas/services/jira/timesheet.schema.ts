@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 
 // User authentication schema
 export const jiraUserAuthReqSchema = z.object({});

@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { jiraFieldsSchema } from "@/schemas/jira/fields.schema";
 
 export const jiraFieldParentSchema = z.object({
