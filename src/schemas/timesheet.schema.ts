@@ -43,6 +43,7 @@ export const processTodoEntriesSchema = z.object({
   token: z.string().min(1),
   timesheet: z.string(),
   epicKeys: z.array(z.string()),
+  useAI: z.boolean().optional().default(true),
   thresholds: z
     .object({
       highConfidence: z.number().min(0).max(1).default(0.75),

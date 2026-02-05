@@ -2,7 +2,6 @@ import { tngdJiraDomain } from "@/constants/jira";
 import { jiraApiSchemas } from "@/schemas/jira.schema";
 import { createZodRequestor } from "@/utils/create-zod-requestor";
 import axios from "axios";
-import { z } from "zod";
 import { jiraSearchResSchema } from "@/schemas/services/jira/search.schema";
 import { jiraUserAuthResSchema } from "@/schemas/services/jira/timesheet.schema";
 import { jiraIssueSchema } from "@/schemas/jira/issue.schema";

@@ -22,6 +22,7 @@ import {
   logWorkToJira,
   parseTimesheetEntries,
 } from "@/services/timesheet-logging";
+import { AI_CONFIG } from "@/constants/jira-timesheet";
 
 // Default configuration
 const DEFAULT_THRESHOLDS = {
@@ -124,6 +125,7 @@ const processTodoEntries = async (req: Request, res: Response) => {
       token,
       timesheet,
       epicKeys,
+      useAI,
       thresholds = DEFAULT_THRESHOLDS,
     } = parsed.data;
 
@@ -173,6 +175,7 @@ const processTodoEntries = async (req: Request, res: Response) => {
       todoEntries,
       allTickets,
       thresholds,
+      useAI,
     );
 
     // Generate summary
@@ -197,6 +200,10 @@ const processTodoEntries = async (req: Request, res: Response) => {
       entries: processedEntries,
       summary,
       timesheetPreview,
+      aiEnabled: AI_CONFIG.ENABLED,
+      aiRequested: useAI,
+      matchingMethod:
+        useAI && AI_CONFIG.ENABLED ? "AI-Enhanced" : "Keyword-Based",
     });
   } catch (error: any) {
     res.status(500).json({

@@ -3,6 +3,17 @@ export const JIRA_TIMESHEET_CONFIG = {
   JIRA_URL: process.env.JIRA_URL,
   EMAIL: process.env.EMAIL,
   API_TOKEN: process.env.API_TOKEN,
+  GEMINI_API_KEY: process.env.GEMINI_API_KEY,
+} as const;
+
+// AI Configuration
+export const AI_CONFIG = {
+  ENABLED: true, // Temporarily disabled due to rate limits
+  MODEL_NAME: "models/gemini-2.5-flash", // Using valid model from API discovery
+  MAX_RETRIES: 3,
+  TIMEOUT_MS: 30000,
+  BATCH_TIMEOUT_MS: 90000, // Longer timeout for batch processing
+  MAX_BATCH_SIZE: 6, // Reasonable batch size for free tier
 } as const;
 
 // Confidence thresholds for ticket matching
@@ -41,3 +52,14 @@ export const JIRA_API_CONFIG = {
     "parent",
   ] as const,
 } as const;
+
+export const EXCLUDED_STATUS = [
+  "done",
+  "deployed",
+  "closed",
+  "cancelled",
+  "rollback",
+  "ready to deploy",
+];
+
+export const EXCLUDED_ISSUE_TYPES = ["story", "epic", "feature story"];

@@ -9,7 +9,8 @@
     "dev": "bun --hot ./src/index.ts",
     "build": "tsc",
     "clean": "rm -rf lib",
-    "start": "node lib/index.js"
+    "start": "node lib/index.js",
+    "debug-gemini": "bun run debug-gemini-models.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -20,6 +21,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/uuid": "^11.0.0",
