@@ -22,5 +22,7 @@ if (process.env.NODE_ENV !== "production") {
   });
 }
 
+app.options("*", cors());
+
 // ✅ This is what Vercel uses
 export default serverless(app);
