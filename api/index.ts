@@ -14,16 +14,4 @@ app.use(
 
 registerAllRoutes(app);
 
-// ✅ Only start server locally (NOT on Vercel)
-if (process.env.NODE_ENV !== "production") {
-  const PORT = 9001;
-  app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-  });
-}
-
-app.use(cors()); // allows all origins
-app.options("*", cors());
-
-// ✅ This is what Vercel uses
 export default serverless(app);
