@@ -3,11 +3,6 @@
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "outputDirectory": "./lib",
-  "functions": {
-    "api/index.js": {
-      "runtime": "@vercel/node@3.0.7"
-    }
-  },
   "routes": [
     {
       "src": "/(.*)",
