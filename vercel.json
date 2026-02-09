@@ -1,5 +1,16 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "functions": {
+    "lib/api/index.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "lib/api/index.js"
+    }
+  ]
 }
