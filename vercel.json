@@ -3,14 +3,8 @@
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "functions": {
-    "lib/api/index.js": {
-      "runtime": "nodejs20.x"
+    "api/index.js": {
+      "runtime": "@vercel/node@3.0.7"
     }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "lib/api/index.js"
-    }
-  ]
+  }
 }
