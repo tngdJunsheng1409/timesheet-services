@@ -13,7 +13,6 @@
     "debug-gemini": "bun run debug-gemini-models.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest",
     "@types/node": "^25.2.0",
     "@types/string-similarity": "^4.0.2"
   },
