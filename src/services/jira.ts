@@ -239,6 +239,36 @@ export const getTicketByKey = async (
   }
 };
 
+// Helper function to add delay for rate limiting
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// Check if an issue exists before trying to log work
+export const checkIssueExists = async (
+  email: string,
+  apiToken: string,
+  issueKey: string,
+): Promise<boolean> => {
+  try {
+    const token = Buffer.from(`${email}:${apiToken}`).toString("base64");
+    const res = await axios.get(
+      `${JIRA_URL}/rest/api/3/issue/${issueKey}?fields=key`,
+      {
+        headers: {
+          Authorization: `Basic ${token}`,
+          Accept: "application/json",
+        },
+      },
+    );
+    return res.status === 200;
+  } catch (error: any) {
+    if (error.response?.status === 404) {
+      return false;
+    }
+    // For other errors, assume issue might exist but there's another problem
+    return true;
+  }
+};
+
 export const logWorkEntry = async (
   email: string,
   apiToken: string,
@@ -248,15 +278,21 @@ export const logWorkEntry = async (
     started: string;
     timeSpentSeconds: number;
   },
+  retryCount: number = 0,
 ): Promise<void> => {
+  const maxRetries = 3;
+  const baseDelay = 1000; // 1 second
+
   try {
-    const jiraRequestor = createJiraRequestor(email, apiToken);
-    const jiraLogWork = jiraRequestor.createNormalRequest(
-      `issue/{issueKey}/worklog`,
-      {
-        method: "POST",
-      },
-    );
+    // First check if the issue exists
+    const issueExists = await checkIssueExists(email, apiToken, issueKey);
+    if (!issueExists) {
+      throw new Error(
+        `Issue ${issueKey} does not exist or you don't have permission to access it`,
+      );
+    }
+
+    const token = Buffer.from(`${email}:${apiToken}`).toString("base64");
 
     const data = {
       comment: {
@@ -278,11 +314,57 @@ export const logWorkEntry = async (
       timeSpentSeconds: worklogData.timeSpentSeconds,
     };
 
-    await jiraLogWork(data);
-  } catch (error) {
-    const errorMessage =
-      error instanceof Error ? error.message : "Unknown error";
-    console.error(`Failed to log work for ${issueKey}:`, errorMessage);
-    throw error;
+    // Use axios directly with proper endpoint substitution
+    await axios.post(`${JIRA_URL}/rest/api/3/issue/${issueKey}/worklog`, data, {
+      headers: {
+        Authorization: `Basic ${token}`,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (error: any) {
+    const status = error.response?.status;
+    const statusText = error.response?.statusText;
+    const responseData = error.response?.data;
+
+    // Handle rate limiting with exponential backoff
+    if (status === 429 && retryCount < maxRetries) {
+      const delayTime = baseDelay * Math.pow(2, retryCount);
+      console.warn(
+        `Rate limited for ${issueKey}. Retrying in ${delayTime}ms (attempt ${retryCount + 1}/${maxRetries})`,
+      );
+      await delay(delayTime);
+      return logWorkEntry(
+        email,
+        apiToken,
+        issueKey,
+        worklogData,
+        retryCount + 1,
+      );
+    }
+
+    // Enhanced error message with detailed information
+    let errorMessage = `Failed to log work for ${issueKey}`;
+
+    if (status) {
+      errorMessage += ` - HTTP ${status}`;
+      if (statusText) {
+        errorMessage += ` (${statusText})`;
+      }
+    }
+
+    if (responseData?.errorMessages?.length > 0) {
+      errorMessage += ` - ${responseData.errorMessages.join(", ")}`;
+    } else if (responseData?.errors) {
+      const errorDetails = Object.entries(responseData.errors)
+        .map(([field, msg]) => `${field}: ${msg}`)
+        .join(", ");
+      errorMessage += ` - ${errorDetails}`;
+    } else if (error.message) {
+      errorMessage += ` - ${error.message}`;
+    }
+
+    console.error(errorMessage);
+    throw new Error(errorMessage);
   }
 };

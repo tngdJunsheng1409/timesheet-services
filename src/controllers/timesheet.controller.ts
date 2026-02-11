@@ -21,6 +21,7 @@ import { RouteOptions } from "@/types/routes";
 import {
   logWorkToJira,
   parseTimesheetEntries,
+  logMultipleWorkEntries,
 } from "@/services/timesheet-logging";
 import { AI_CONFIG } from "@/constants/jira-timesheet";
 
@@ -303,34 +304,23 @@ const logTimesheetEntries = async (req: Request, res: Response) => {
       });
     }
 
-    // Log entries to Jira
-    const results = await Promise.allSettled(
-      parsedEntries.map((entry) => logWorkToJira(email, token, entry)),
-    );
-
-    const successCount = results.filter((r) => r.status === "fulfilled").length;
-    const failureCount = results.filter((r) => r.status === "rejected").length;
-
-    const failedEntries = results
-      .map((result, index) => {
-        if (result.status === "rejected") {
-          return {
-            entry: parsedEntries[index],
-            error: result.reason.message || "Unknown error",
-          };
-        }
-        return null;
-      })
-      .filter(Boolean);
+    // Log entries to Jira with proper rate limiting and error handling
+    const results = await logMultipleWorkEntries(email, token, parsedEntries);
 
     res.json({
       success: true,
       summary: {
         total: parsedEntries.length,
-        successful: successCount,
-        failed: failureCount,
+        successful: results.success.length,
+        failed: results.failed.length,
       },
-      failedEntries,
+      failedEntries: results.failed,
+      successfulEntries: results.success.map((entry) => ({
+        issueKey: entry.issueKey,
+        comment: entry.comment,
+        started: entry.started,
+        durationSeconds: entry.durationSeconds,
+      })),
     });
   } catch (error: any) {
     res.status(500).json({

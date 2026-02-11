@@ -1,0 +1,232 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "timesheet-services",
+      "dependencies": {
+        "@google/generative-ai": "^0.24.1",
+        "@serverless-devs/s": "^3.1.10",
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.6",
+        "@types/uuid": "^11.0.0",
+        "axios": "^1.13.4",
+        "cors": "^2.8.6",
+        "dayjs": "^1.11.19",
+        "express": "^5.2.1",
+        "serverless-http": "^4.0.0",
+        "string-similarity": "^4.0.4",
+        "uuid": "^13.0.0",
+        "zod": "^4.3.6",
+      },
+      "devDependencies": {
+        "@types/node": "^25.2.0",
+        "@types/string-similarity": "^4.0.2",
+      },
+      "peerDependencies": {
+        "typescript": "^5",
+      },
+    },
+  },
+  "packages": {
+    "@google/generative-ai": ["@google/generative-ai@0.24.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@google/generative-ai/-/generative-ai-0.24.1.tgz", {}, "sha1-Y0o8BvjqemElwbDWweZrsRr7Usk="],
+
+    "@serverless-devs/s": ["@serverless-devs/s@3.1.10", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@serverless-devs/s/-/s-3.1.10.tgz", { "bin": { "s": "bin/s" } }, "sha1-s/4seNhUrDhK3rjbkov73507pXo="],
+
+    "@types/body-parser": ["@types/body-parser@1.19.6", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/body-parser/-/body-parser-1.19.6.tgz", { "dependencies": { "@types/connect": "*", "@types/node": "*" } }, "sha1-GFm+u4/X2smRikXVTBlxq4ta9HQ="],
+
+    "@types/connect": ["@types/connect@3.4.38", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/connect/-/connect-3.4.38.tgz", { "dependencies": { "@types/node": "*" } }, "sha1-W6fzvE+73q/43e2VLl/yzFP42Fg="],
+
+    "@types/cors": ["@types/cors@2.8.19", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/cors/-/cors-2.8.19.tgz", { "dependencies": { "@types/node": "*" } }, "sha1-2T6iZz/YyfaXNn9e7vwrv6lPA0I="],
+
+    "@types/express": ["@types/express@5.0.6", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/express/-/express-5.0.6.tgz", { "dependencies": { "@types/body-parser": "*", "@types/express-serve-static-core": "^5.0.0", "@types/serve-static": "^2" } }, "sha1-LXJLLJkNy4yERAY/NYCpA/bVAMw="],
+
+    "@types/express-serve-static-core": ["@types/express-serve-static-core@5.1.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/express-serve-static-core/-/express-serve-static-core-5.1.1.tgz", { "dependencies": { "@types/node": "*", "@types/qs": "*", "@types/range-parser": "*", "@types/send": "*" } }, "sha1-Gnf6/+6VctORJJMyWb4lI4N9fqo="],
+
+    "@types/http-errors": ["@types/http-errors@2.0.5", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/http-errors/-/http-errors-2.0.5.tgz", {}, "sha1-W3SasrFroRNCP+saZKldzTA5hHI="],
+
+    "@types/node": ["@types/node@25.2.3", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/node/-/node-25.2.3.tgz", { "dependencies": { "undici-types": "~7.16.0" } }, "sha1-nBgkW+dovbTOYxVmx9owOlyZp/g="],
+
+    "@types/qs": ["@types/qs@6.14.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/qs/-/qs-6.14.0.tgz", {}, "sha1-2LYM7PYvLbD7aOXgBgd7kXi4XeU="],
+
+    "@types/range-parser": ["@types/range-parser@1.2.7", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/range-parser/-/range-parser-1.2.7.tgz", {}, "sha1-UK5DU+qt3AQEQnmBL1LIxlhX28s="],
+
+    "@types/send": ["@types/send@1.2.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/send/-/send-1.2.1.tgz", { "dependencies": { "@types/node": "*" } }, "sha1-anhORVQ8GMd0wEm/9tPbrwRcnHQ="],
+
+    "@types/serve-static": ["@types/serve-static@2.2.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/serve-static/-/serve-static-2.2.0.tgz", { "dependencies": { "@types/http-errors": "*", "@types/node": "*" } }, "sha1-1KRHUD6tDRZxEy0atr1YuAXY3mo="],
+
+    "@types/string-similarity": ["@types/string-similarity@4.0.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/string-similarity/-/string-similarity-4.0.2.tgz", {}, "sha1-pzC6RtESvO2Mz8M9P3AYL2B1EaM="],
+
+    "@types/uuid": ["@types/uuid@11.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/@types/uuid/-/uuid-11.0.0.tgz", { "dependencies": { "uuid": "*" } }, "sha1-9Po0u/KvlBFI7xlzxDYfxDYXlxw="],
+
+    "accepts": ["accepts@2.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/accepts/-/accepts-2.0.0.tgz", { "dependencies": { "mime-types": "^3.0.0", "negotiator": "^1.0.0" } }, "sha1-u89LpQdUZ/PyEx6rPP/HPC9deJU="],
+
+    "asynckit": ["asynckit@0.4.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/asynckit/-/asynckit-0.4.0.tgz", {}, "sha1-x57Zf380y48robyXkLzDZkdLS3k="],
+
+    "axios": ["axios@1.13.5", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/axios/-/axios-1.13.5.tgz", { "dependencies": { "follow-redirects": "^1.15.11", "form-data": "^4.0.5", "proxy-from-env": "^1.1.0" } }, "sha1-XkZGiPoSfhGmYKLElEHACfZWekM="],
+
+    "body-parser": ["body-parser@2.2.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/body-parser/-/body-parser-2.2.2.tgz", { "dependencies": { "bytes": "^3.1.2", "content-type": "^1.0.5", "debug": "^4.4.3", "http-errors": "^2.0.0", "iconv-lite": "^0.7.0", "on-finished": "^2.4.1", "qs": "^6.14.1", "raw-body": "^3.0.1", "type-is": "^2.0.1" } }, "sha1-GjLNuWa+r2jeUKnfvltY+Dy4iQw="],
+
+    "bytes": ["bytes@3.1.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/bytes/-/bytes-3.1.2.tgz", {}, "sha1-iwvuuYYFrfGxKPpDhkA8AJ4CIaU="],
+
+    "call-bind-apply-helpers": ["call-bind-apply-helpers@1.0.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz", { "dependencies": { "es-errors": "^1.3.0", "function-bind": "^1.1.2" } }, "sha1-S1QowiK+mF15w9gmV0edvgtZstY="],
+
+    "call-bound": ["call-bound@1.0.4", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/call-bound/-/call-bound-1.0.4.tgz", { "dependencies": { "call-bind-apply-helpers": "^1.0.2", "get-intrinsic": "^1.3.0" } }, "sha1-I43pNdKippKSjFOMfM+pEGf9Bio="],
+
+    "combined-stream": ["combined-stream@1.0.8", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/combined-stream/-/combined-stream-1.0.8.tgz", { "dependencies": { "delayed-stream": "~1.0.0" } }, "sha1-w9RaizT9cwYxoRCoolIGgrMdWn8="],
+
+    "content-disposition": ["content-disposition@1.0.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/content-disposition/-/content-disposition-1.0.1.tgz", {}, "sha1-qLe76ykEvv37Z4flwMCGlZ9gX5s="],
+
+    "content-type": ["content-type@1.0.5", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/content-type/-/content-type-1.0.5.tgz", {}, "sha1-i3cxYmVtHRCGeEyPI6VM5tc9eRg="],
+
+    "cookie": ["cookie@0.7.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/cookie/-/cookie-0.7.2.tgz", {}, "sha1-VWNpxHKiupEPKXmJG1JrNDYjftc="],
+
+    "cookie-signature": ["cookie-signature@1.2.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/cookie-signature/-/cookie-signature-1.2.2.tgz", {}, "sha1-V8f8PMKTrKuf7FTXPhVpDr5KF5M="],
+
+    "cors": ["cors@2.8.6", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/cors/-/cors-2.8.6.tgz", { "dependencies": { "object-assign": "^4", "vary": "^1" } }, "sha1-/13Wm9leVHUDgg0pq6T4+vjf7JY="],
+
+    "dayjs": ["dayjs@1.11.19", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/dayjs/-/dayjs-1.11.19.tgz", {}, "sha1-FdyY6FS7Q5F/EgIYBq+JfFiuKTg="],
+
+    "debug": ["debug@4.4.3", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }, "sha1-xq5DLZvZZiWC/OCHCbA4xY6ePWo="],
+
+    "delayed-stream": ["delayed-stream@1.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/delayed-stream/-/delayed-stream-1.0.0.tgz", {}, "sha1-3zrhmayt+31ECqrgsp4icrJOxhk="],
+
+    "depd": ["depd@2.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/depd/-/depd-2.0.0.tgz", {}, "sha1-tpYWPMdXVg0JzyLMj60Vcbeedt8="],
+
+    "dunder-proto": ["dunder-proto@1.0.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/dunder-proto/-/dunder-proto-1.0.1.tgz", { "dependencies": { "call-bind-apply-helpers": "^1.0.1", "es-errors": "^1.3.0", "gopd": "^1.2.0" } }, "sha1-165mfh3INIL4tw/Q9u78UNow9Yo="],
+
+    "ee-first": ["ee-first@1.1.1", "http://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/ee-first/-/ee-first-1.1.1.tgz", {}, "sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0="],
+
+    "encodeurl": ["encodeurl@2.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/encodeurl/-/encodeurl-2.0.0.tgz", {}, "sha1-e46omAd9fkCdOsRUdOo46vCFelg="],
+
+    "es-define-property": ["es-define-property@1.0.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/es-define-property/-/es-define-property-1.0.1.tgz", {}, "sha1-mD6y+aZyTpMD9hrd8BHHLgngsPo="],
+
+    "es-errors": ["es-errors@1.3.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/es-errors/-/es-errors-1.3.0.tgz", {}, "sha1-BfdaJdq5jk+x3NXhRywFRtUFfI8="],
+
+    "es-object-atoms": ["es-object-atoms@1.1.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/es-object-atoms/-/es-object-atoms-1.1.1.tgz", { "dependencies": { "es-errors": "^1.3.0" } }, "sha1-HE8sSDcydZfOadLKGQp/3RcjOME="],
+
+    "es-set-tostringtag": ["es-set-tostringtag@2.1.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz", { "dependencies": { "es-errors": "^1.3.0", "get-intrinsic": "^1.2.6", "has-tostringtag": "^1.0.2", "hasown": "^2.0.2" } }, "sha1-8x274MGDsAptJutjJcgQwP0YvU0="],
+
+    "escape-html": ["escape-html@1.0.3", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/escape-html/-/escape-html-1.0.3.tgz", {}, "sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg="],
+
+    "etag": ["etag@1.8.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/etag/-/etag-1.8.1.tgz", {}, "sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc="],
+
+    "express": ["express@5.2.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/express/-/express-5.2.1.tgz", { "dependencies": { "accepts": "^2.0.0", "body-parser": "^2.2.1", "content-disposition": "^1.0.0", "content-type": "^1.0.5", "cookie": "^0.7.1", "cookie-signature": "^1.2.1", "debug": "^4.4.0", "depd": "^2.0.0", "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "etag": "^1.8.1", "finalhandler": "^2.1.0", "fresh": "^2.0.0", "http-errors": "^2.0.0", "merge-descriptors": "^2.0.0", "mime-types": "^3.0.0", "on-finished": "^2.4.1", "once": "^1.4.0", "parseurl": "^1.3.3", "proxy-addr": "^2.0.7", "qs": "^6.14.0", "range-parser": "^1.2.1", "router": "^2.2.0", "send": "^1.1.0", "serve-static": "^2.2.0", "statuses": "^2.0.1", "type-is": "^2.0.1", "vary": "^1.1.2" } }, "sha1-jyHRW20yf5K0eU7PjLCKcvlWrAQ="],
+
+    "finalhandler": ["finalhandler@2.1.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/finalhandler/-/finalhandler-2.1.1.tgz", { "dependencies": { "debug": "^4.4.0", "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "on-finished": "^2.4.1", "parseurl": "^1.3.3", "statuses": "^2.0.1" } }, "sha1-osUXplWYUrzbBtH4vX9Rto+tgJk="],
+
+    "follow-redirects": ["follow-redirects@1.15.11", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/follow-redirects/-/follow-redirects-1.15.11.tgz", {}, "sha1-d31z1yqS+OxNLkEOtHNSpWuOg0A="],
+
+    "form-data": ["form-data@4.0.5", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/form-data/-/form-data-4.0.5.tgz", { "dependencies": { "asynckit": "^0.4.0", "combined-stream": "^1.0.8", "es-set-tostringtag": "^2.1.0", "hasown": "^2.0.2", "mime-types": "^2.1.12" } }, "sha1-tJ5IhYBF/0y/awPhgFzrytNnkFM="],
+
+    "forwarded": ["forwarded@0.2.0", "http://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/forwarded/-/forwarded-0.2.0.tgz", {}, "sha1-ImmTZCiq1MFcfr6XeahL8LKoGBE="],
+
+    "fresh": ["fresh@2.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/fresh/-/fresh-2.0.0.tgz", {}, "sha1-jdffahs6Gzpc8YbAWl3SZ2ImNaQ="],
+
+    "function-bind": ["function-bind@1.1.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/function-bind/-/function-bind-1.1.2.tgz", {}, "sha1-LALYZNl/PqbIgwxGTL0Rq26rehw="],
+
+    "get-intrinsic": ["get-intrinsic@1.3.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/get-intrinsic/-/get-intrinsic-1.3.0.tgz", { "dependencies": { "call-bind-apply-helpers": "^1.0.2", "es-define-property": "^1.0.1", "es-errors": "^1.3.0", "es-object-atoms": "^1.1.1", "function-bind": "^1.1.2", "get-proto": "^1.0.1", "gopd": "^1.2.0", "has-symbols": "^1.1.0", "hasown": "^2.0.2", "math-intrinsics": "^1.1.0" } }, "sha1-dD8OO2lkqTpUke0b/6rgVNf5jQE="],
+
+    "get-proto": ["get-proto@1.0.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/get-proto/-/get-proto-1.0.1.tgz", { "dependencies": { "dunder-proto": "^1.0.1", "es-object-atoms": "^1.0.0" } }, "sha1-FQs/J0OGnvPoUewMSdFbHRTQDuE="],
+
+    "gopd": ["gopd@1.2.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/gopd/-/gopd-1.2.0.tgz", {}, "sha1-ifVrghe9vIgCvSmd9tfxCB1+UaE="],
+
+    "has-symbols": ["has-symbols@1.1.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/has-symbols/-/has-symbols-1.1.0.tgz", {}, "sha1-/JxqeDoISVHQuXH+EBjegTcHozg="],
+
+    "has-tostringtag": ["has-tostringtag@1.0.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/has-tostringtag/-/has-tostringtag-1.0.2.tgz", { "dependencies": { "has-symbols": "^1.0.3" } }, "sha1-LNxC1AvvLltO6rfAGnPFTOerWrw="],
+
+    "hasown": ["hasown@2.0.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/hasown/-/hasown-2.0.2.tgz", { "dependencies": { "function-bind": "^1.1.2" } }, "sha1-AD6vkb563DcuhOxZ3DclLO24AAM="],
+
+    "http-errors": ["http-errors@2.0.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/http-errors/-/http-errors-2.0.1.tgz", { "dependencies": { "depd": "~2.0.0", "inherits": "~2.0.4", "setprototypeof": "~1.2.0", "statuses": "~2.0.2", "toidentifier": "~1.0.1" } }, "sha1-NtL2W8kJyHkAGN02+02T2myq4Gs="],
+
+    "iconv-lite": ["iconv-lite@0.7.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/iconv-lite/-/iconv-lite-0.7.2.tgz", { "dependencies": { "safer-buffer": ">= 2.1.2 < 3.0.0" } }, "sha1-0L3qw/ErSDW3NZwq2JxCKk0cxy4="],
+
+    "inherits": ["inherits@2.0.4", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/inherits/-/inherits-2.0.4.tgz", {}, "sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w="],
+
+    "ipaddr.js": ["ipaddr.js@1.9.1", "http://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/ipaddr.js/-/ipaddr.js-1.9.1.tgz", {}, "sha1-v/OFQ+64mEglB5/zoqjmy9RngbM="],
+
+    "is-promise": ["is-promise@4.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/is-promise/-/is-promise-4.0.0.tgz", {}, "sha1-Qv+fhCBsGZHSbev1IN1cAQQt0vM="],
+
+    "math-intrinsics": ["math-intrinsics@1.1.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/math-intrinsics/-/math-intrinsics-1.1.0.tgz", {}, "sha1-oN10voHiqlwvJ+Zc4oNgXuTit/k="],
+
+    "media-typer": ["media-typer@1.1.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/media-typer/-/media-typer-1.1.0.tgz", {}, "sha1-ardLjy0zIPIGSyqHo455Mf86VWE="],
+
+    "merge-descriptors": ["merge-descriptors@2.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/merge-descriptors/-/merge-descriptors-2.0.0.tgz", {}, "sha1-6pIvZgY1oiSe5WXgRJ+VHmtgOAg="],
+
+    "mime-db": ["mime-db@1.54.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/mime-db/-/mime-db-1.54.0.tgz", {}, "sha1-zds+5PnGRTDf9kAjZmHULLajFPU="],
+
+    "mime-types": ["mime-types@3.0.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/mime-types/-/mime-types-3.0.2.tgz", { "dependencies": { "mime-db": "^1.54.0" } }, "sha1-OQAtQYJXXVrwNv+hGBAPJSSy4qs="],
+
+    "ms": ["ms@2.1.3", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/ms/-/ms-2.1.3.tgz", {}, "sha1-V0yBOM4dK1hh8LRFedut1gxmFbI="],
+
+    "negotiator": ["negotiator@1.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/negotiator/-/negotiator-1.0.0.tgz", {}, "sha1-tskbtHFy1p+Tz9fDV7u1KQGbX2o="],
+
+    "object-assign": ["object-assign@4.1.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/object-assign/-/object-assign-4.1.1.tgz", {}, "sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM="],
+
+    "object-inspect": ["object-inspect@1.13.4", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/object-inspect/-/object-inspect-1.13.4.tgz", {}, "sha1-g3UmXiG8IND6WCwi4bE0hdbgAhM="],
+
+    "on-finished": ["on-finished@2.4.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/on-finished/-/on-finished-2.4.1.tgz", { "dependencies": { "ee-first": "1.1.1" } }, "sha1-WMjEQRblSEWtV/FKsQsDUzGErD8="],
+
+    "once": ["once@1.4.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/once/-/once-1.4.0.tgz", { "dependencies": { "wrappy": "1" } }, "sha1-WDsap3WWHUsROsF9nFC6753Xa9E="],
+
+    "parseurl": ["parseurl@1.3.3", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/parseurl/-/parseurl-1.3.3.tgz", {}, "sha1-naGee+6NEt/wUT7Vt2lXeTvC6NQ="],
+
+    "path-to-regexp": ["path-to-regexp@8.3.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/path-to-regexp/-/path-to-regexp-8.3.0.tgz", {}, "sha1-qoGKaYH5kyEAOgiYfTzsnDR0zR8="],
+
+    "proxy-addr": ["proxy-addr@2.0.7", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/proxy-addr/-/proxy-addr-2.0.7.tgz", { "dependencies": { "forwarded": "0.2.0", "ipaddr.js": "1.9.1" } }, "sha1-8Z/mnOqzEe65S0LnDowgcPm6ECU="],
+
+    "proxy-from-env": ["proxy-from-env@1.1.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/proxy-from-env/-/proxy-from-env-1.1.0.tgz", {}, "sha1-4QLxbKNVQkhldV0sno6k8k1Yw+I="],
+
+    "qs": ["qs@6.14.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/qs/-/qs-6.14.1.tgz", { "dependencies": { "side-channel": "^1.1.0" } }, "sha1-pB2FudOQLzHSeGF5BQYpSIGHEVk="],
+
+    "range-parser": ["range-parser@1.2.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/range-parser/-/range-parser-1.2.1.tgz", {}, "sha1-PPNwI9GZ4cJNGlW4SADC8+ZGgDE="],
+
+    "raw-body": ["raw-body@3.0.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/raw-body/-/raw-body-3.0.2.tgz", { "dependencies": { "bytes": "~3.1.2", "http-errors": "~2.0.1", "iconv-lite": "~0.7.0", "unpipe": "~1.0.0" } }, "sha1-PjraWuVWj5CV2EN2/TpJuPsAClE="],
+
+    "router": ["router@2.2.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/router/-/router-2.2.0.tgz", { "dependencies": { "debug": "^4.4.0", "depd": "^2.0.0", "is-promise": "^4.0.0", "parseurl": "^1.3.3", "path-to-regexp": "^8.0.0" } }, "sha1-AZvmILcRyHZBFnzHm5kJDwCxRu8="],
+
+    "safer-buffer": ["safer-buffer@2.1.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/safer-buffer/-/safer-buffer-2.1.2.tgz", {}, "sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo="],
+
+    "send": ["send@1.2.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/send/-/send-1.2.1.tgz", { "dependencies": { "debug": "^4.4.3", "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "etag": "^1.8.1", "fresh": "^2.0.0", "http-errors": "^2.0.1", "mime-types": "^3.0.2", "ms": "^2.1.3", "on-finished": "^2.4.1", "range-parser": "^1.2.1", "statuses": "^2.0.2" } }, "sha1-nqt0O4dPNVD0CiaGe/KGrWDT8+0="],
+
+    "serve-static": ["serve-static@2.2.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/serve-static/-/serve-static-2.2.1.tgz", { "dependencies": { "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "parseurl": "^1.3.3", "send": "^1.2.0" } }, "sha1-fxhqSk5fW2Y616QpT/G/N88OmKk="],
+
+    "serverless-http": ["serverless-http@4.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/serverless-http/-/serverless-http-4.0.0.tgz", {}, "sha1-KDjtbL0jCVzdQJ/w7ADGLskp2vE="],
+
+    "setprototypeof": ["setprototypeof@1.2.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/setprototypeof/-/setprototypeof-1.2.0.tgz", {}, "sha1-ZsmiSnP5/CjL5msJ/tPTPcrxtCQ="],
+
+    "side-channel": ["side-channel@1.1.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/side-channel/-/side-channel-1.1.0.tgz", { "dependencies": { "es-errors": "^1.3.0", "object-inspect": "^1.13.3", "side-channel-list": "^1.0.0", "side-channel-map": "^1.0.1", "side-channel-weakmap": "^1.0.2" } }, "sha1-w/z/nE2pMnhIczNeyXZfqU/2a8k="],
+
+    "side-channel-list": ["side-channel-list@1.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/side-channel-list/-/side-channel-list-1.0.0.tgz", { "dependencies": { "es-errors": "^1.3.0", "object-inspect": "^1.13.3" } }, "sha1-EMtZhCYxFdO3oOM2WR4pCoMK+K0="],
+
+    "side-channel-map": ["side-channel-map@1.0.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/side-channel-map/-/side-channel-map-1.0.1.tgz", { "dependencies": { "call-bound": "^1.0.2", "es-errors": "^1.3.0", "get-intrinsic": "^1.2.5", "object-inspect": "^1.13.3" } }, "sha1-1rtrN5Asb+9RdOX1M/q0xzKib0I="],
+
+    "side-channel-weakmap": ["side-channel-weakmap@1.0.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/side-channel-weakmap/-/side-channel-weakmap-1.0.2.tgz", { "dependencies": { "call-bound": "^1.0.2", "es-errors": "^1.3.0", "get-intrinsic": "^1.2.5", "object-inspect": "^1.13.3", "side-channel-map": "^1.0.1" } }, "sha1-Ed2hnVNo5Azp7CvcH7DsvAeQ7Oo="],
+
+    "statuses": ["statuses@2.0.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/statuses/-/statuses-2.0.2.tgz", {}, "sha1-j3XuzvdlteHPzcCA2llAntQk44I="],
+
+    "string-similarity": ["string-similarity@4.0.4", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/string-similarity/-/string-similarity-4.0.4.tgz", {}, "sha1-QtAasLNGYOqKAY2o9WozCbuLKls="],
+
+    "toidentifier": ["toidentifier@1.0.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/toidentifier/-/toidentifier-1.0.1.tgz", {}, "sha1-O+NDIaiKgg7RvYDfqjPkefu43TU="],
+
+    "type-is": ["type-is@2.0.1", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/type-is/-/type-is-2.0.1.tgz", { "dependencies": { "content-type": "^1.0.5", "media-typer": "^1.1.0", "mime-types": "^3.0.0" } }, "sha1-ZPbPA/kvzkAVwrIkeT9r3UsGjJc="],
+
+    "typescript": ["typescript@5.9.3", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/typescript/-/typescript-5.9.3.tgz", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha1-W09Z4VMQqxeiFvXWz1PuR27eZw8="],
+
+    "undici-types": ["undici-types@7.16.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/undici-types/-/undici-types-7.16.0.tgz", {}, "sha1-/8zf82rqSITL/OmnUKBYAiT1ikY="],
+
+    "unpipe": ["unpipe@1.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/unpipe/-/unpipe-1.0.0.tgz", {}, "sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw="],
+
+    "uuid": ["uuid@13.0.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/uuid/-/uuid-13.0.0.tgz", { "bin": { "uuid": "dist-node/bin/uuid" } }, "sha1-Jj3DQbGbTXVeuP42t42VprZXB+g="],
+
+    "vary": ["vary@1.1.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/vary/-/vary-1.1.2.tgz", {}, "sha1-IpnwLG3tMNSllhsLn3RSShj2NPw="],
+
+    "wrappy": ["wrappy@1.0.2", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/wrappy/-/wrappy-1.0.2.tgz", {}, "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8="],
+
+    "zod": ["zod@4.3.6", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/zod/-/zod-4.3.6.tgz", {}, "sha1-icVuCqfSsFEH2JRBIicIeIWrESo="],
+
+    "form-data/mime-types": ["mime-types@2.1.35", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/mime-types/-/mime-types-2.1.35.tgz", { "dependencies": { "mime-db": "1.52.0" } }, "sha1-OBqHG2KnNEUGYK497uRIE/cNlZo="],
+
+    "form-data/mime-types/mime-db": ["mime-db@1.52.0", "https://artifactory.tngdigital.com.my/artifactory/api/npm/My-Mobile-Npm/mime-db/-/mime-db-1.52.0.tgz", {}, "sha1-u6vNwChZ9JhzAchW4zh85exDv3A="],
+  }
+}

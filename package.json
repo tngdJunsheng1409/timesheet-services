@@ -5,7 +5,7 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "dev": "bun --hot ./api/index.ts",
+    "dev": "bun --hot ./src/index.ts",
     "build": "tsc",
     "clean": "rm -rf lib",
     "start": "node lib/index.js",

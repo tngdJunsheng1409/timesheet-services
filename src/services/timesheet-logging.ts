@@ -78,22 +78,56 @@ export const parseTimesheetEntries = (
   return entries;
 };
 
+// Helper function to add small delay between requests
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
 export const logWorkToJira = async (
   email: string,
   token: string,
   entry: WorkLogEntry,
 ): Promise<void> => {
   try {
+    // Add a small delay to prevent overwhelming the API
+    await delay(100);
+
     await logWorkEntry(email, token, entry.issueKey, {
       comment: entry.comment,
       started: entry.started,
       timeSpentSeconds: entry.durationSeconds,
     });
-  } catch (error: any) {
-    const errorMessage =
-      error instanceof Error ? error.message : "Unknown error";
-    throw new Error(
-      `Failed to log work for ${entry.issueKey}: ${errorMessage}`,
+
+    console.log(
+      `✓ Successfully logged work for ${entry.issueKey}: ${entry.comment}`,
     );
+  } catch (error: any) {
+    // The error message is already detailed from logWorkEntry, so just re-throw
+    throw error;
   }
+};
+
+// Batch function to log multiple entries with proper rate limiting
+export const logMultipleWorkEntries = async (
+  email: string,
+  token: string,
+  entries: WorkLogEntry[],
+): Promise<{
+  success: WorkLogEntry[];
+  failed: { entry: WorkLogEntry; error: string }[];
+}> => {
+  const success: WorkLogEntry[] = [];
+  const failed: { entry: WorkLogEntry; error: string }[] = [];
+
+  for (const entry of entries) {
+    try {
+      await logWorkToJira(email, token, entry);
+      success.push(entry);
+    } catch (error: any) {
+      failed.push({
+        entry,
+        error: error.message || "Unknown error",
+      });
+    }
+  }
+
+  return { success, failed };
 };
